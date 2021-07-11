@@ -22,6 +22,18 @@ namespace AnimalShelter.Controllers
     {
       return await _db.Pets.ToListAsync();
     }
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Pet>> GetPet(int id)
+    {
+        var pet = await _db.Pets.FindAsync(id);
+
+        if (pet == null)
+        {
+            return NotFound();
+        }
+
+        return pet;
+    }
 
     [HttpPost]
     public async Task<ActionResult<Pet>> Post(Pet pet)
@@ -29,7 +41,7 @@ namespace AnimalShelter.Controllers
       _db.Pets.Add(pet);
       await _db.SaveChangesAsync();
 
-      return CreatedAtAction("Post", new { id = pet.PetId }, pet);
+      return CreatedAtAction(nameof(GetPet), new { id = pet.PetId }, pet);
     }
   }
 }
