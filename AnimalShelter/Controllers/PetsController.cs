@@ -19,10 +19,18 @@ namespace AnimalShelter.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Pet>>> Get()
+    public async Task<ActionResult<IEnumerable<Pet>>> Get(string species)
     {
-      return await _db.Pets.ToListAsync();
+      var query = _db.Pets.AsQueryable();
+
+      if (species != null)
+      {
+        query = query.Where(entry => entry.Species == species);
+      }
+
+      return await query.ToListAsync();
     }
+
     [HttpGet("{id}")]
     public async Task<ActionResult<Pet>> GetPet(int id)
     {
