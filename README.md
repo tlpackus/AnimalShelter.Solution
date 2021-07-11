@@ -1,8 +1,14 @@
 # Animal Shelter Api
-### This was an independent created Api for tracking the animals at a shelter/ Epicodus Project
+### This was an independently created Api for tracking the animals at a shelter/ Epicodus Project
 
 ### By Theron Packus
 
+link to swagger documentation:
+
+https://app.swaggerhub.com/apis-docs/tlpackus/AnimalShelter/0.1
+
+![image info](./AnimalShelter/wwwroot/images/CRUD.png)
+![image info](./AnimalShelter/wwwroot/images/CRUD2.png)
 
 ## Known Bugs
 
