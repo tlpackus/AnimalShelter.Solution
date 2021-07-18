@@ -44,7 +44,7 @@ https://app.swaggerhub.com/apis-docs/tlpackus/AnimalShelter/0.1
 * _Open MySQL Workbench (If you don't already have it, it can be downloaded here: https://dev.mysql.com/downloads/file/?id=484391)_
 * _From the `AnimalShelter` directory run command `$ touch appsettings.json` to create a new file._
 * _Input the following script_ (**note the name of the database below needs to match the name of the database you created (e.g. test_database)**)
-![Image of appsettings.json example](./AnimalShelter/wwwroot/img/appsettings.json.expl.png)
+![Image of appsettings.json example](./AnimalShelter/wwwroot/images/appsettings.json.expl.png)
 * _Back in the terminal run `$ dotnet ef database update`_
 * _Your MySQL Workbench should now show a new Schema added_
 * _You can now run $ dotnet run from the AnimalShelter Directory to launch_
